@@ -62,7 +62,25 @@ public class Shop {
         }
     }
 
-    public void addVacuumCleaner(VacuumCleaner cleaner) {
-        //метод, который должен добавить новый пылесос в массив
+    public static VacuumCleaner[] addVacuumCleaner(VacuumCleaner cleaner) {
+        for (int index = 0; index < vacuumCleaners.length; index++) {
+            if (vacuumCleaners[index] == null) {
+               vacuumCleaners[index] = cleaner;
+
+                break;
+            }
+            else if(index == vacuumCleaners.length - 1 && vacuumCleaners[index] != null) {
+                VacuumCleaner[] arrCopy = vacuumCleaners;
+                vacuumCleaners = new VacuumCleaner[arrCopy.length + 1];
+
+                for (int i = 0; i < arrCopy.length; i++) {
+                    vacuumCleaners[i] = arrCopy[i];
+                }
+                vacuumCleaners[vacuumCleaners.length - 1] = cleaner;
+
+                break;
+            }
+        }
+        return vacuumCleaners;
     }
 }
