@@ -1,9 +1,5 @@
 package lecture_5;
 
-public class Human implements Swimmable, Duck.TestInterface {
+public class Human  {
 
-    @Override
-    public void test() {
-
-    }
 }
