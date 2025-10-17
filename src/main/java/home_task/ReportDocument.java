@@ -12,6 +12,11 @@ public class ReportDocument extends Document {
     private int pageCount;
     private String content;
 
+    public ReportDocument(String title, String author, String department) {
+        super(title, author);
+        this.department = department;
+    }
+
     public String getDepartment() {
         return department;
     }
@@ -26,10 +31,6 @@ public class ReportDocument extends Document {
 
     public void setPageCount(int pageCount) {
         this.pageCount = pageCount;
-    }
-
-    public ReportDocument(String title, String author) {
-        super(title, author);
     }
 
     @Override

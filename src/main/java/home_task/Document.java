@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 
 abstract class Document implements Saveable, Displayable{
-    protected String title;
+    public String title;
     protected String author;
     protected LocalDateTime createdDate;
     protected LocalDateTime modifiedDate;
