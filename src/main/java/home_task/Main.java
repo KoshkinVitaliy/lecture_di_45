@@ -31,5 +31,8 @@ public class Main {
         DocumentManager.addDocument(anotherTextDoc);
 
         DocumentManager.displayAllDocuments();
+
+        DocumentManager.saveAllDocuments("src/main/java/home_task");
+
     }
 }
